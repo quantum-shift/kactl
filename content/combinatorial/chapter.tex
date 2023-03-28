@@ -9,6 +9,9 @@
 		Let $g_S(n)$ be the number of $n$-permutations whose cycle lengths all belong to the set $S$. Then
 		$$\sum_{n=0} ^\infty g_S(n) \frac{x^n}{n!} = \exp\left(\sum_{n\in S} \frac{x^n} {n} \right)$$
 
+        Number of ways to color a cycle of length $n$ with $c$ colors
+        $$(c - 1)^n + (-1)^n(c - 1)$$
+
 	\subsection{Derangements}
 		Permutations of a set such that none of the elements appear in their original position.
 		\[ \mkern-2mu D(n) = (n-1)(D(n-1)+D(n-2)) = n D(n-1)+(-1)^n = \left\lfloor\frac{n!}{e}\right\rceil \]
