@@ -2,7 +2,7 @@
  * Author: BForBruteForce
  * Date: 2023-3-28
  * License: CC0
- * Description: Solution to diophatine equation $ax+by=c$
+ * Description: Solution to diophantine equation $ax+by=c$
  * Time: $O(log(MAX))$
  * Status: Not tested
  */
@@ -10,7 +10,7 @@
 
 #include "euclid.h"
 
-bool find_any_solution(int a, int b, int c, int &x0, int &y0, int &g) {
+bool diophantine(int a, int b, int c, int &x0, int &y0, int &g) {
     if (c % g) {
         return false;
     }
