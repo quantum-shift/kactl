@@ -177,3 +177,22 @@ $\lim_{k\rightarrow\infty}\mathbf{P}^k = \mathbf{1}\pi$.
 A Markov chain is an A-chain if the states can be partitioned into two sets $\mathbf{A}$ and $\mathbf{G}$, such that all states in $\mathbf{A}$ are absorbing ($p_{ii}=1$), and all states in $\mathbf{G}$ leads to an absorbing state in $\mathbf{A}$.
 The probability for absorption in state $i\in\mathbf{A}$, when the initial state is $j$, is $a_{ij} = p_{ij}+\sum_{k\in\mathbf{G}} a_{ik}p_{kj}$.
 The expected time until absorption, when the initial state is $i$, is $t_i = 1+\sum_{k\in\mathbf{G}}p_{ki}t_k$.
+
+\section{Josephus Problem}
+Given $n$ people and jump length $k$ in the Josephus Problem:
+\begin{align*}
+J(n,k) &= ((J(n-1,k) + k - 1) \text{ mod } n) + 1 \\
+J(1,k) &= 1 \\
+\end{align*}
+For 0-indexing:
+\begin{align*}
+J(n,k) &= (J(n-1,k) + k) \text{ mod } n \\
+\end{align*}
+For $k=2$:
+\begin{align*}
+J(n) &= 1 + 2(n - 2^{\lfloor \log_2(n) \rfloor})
+\end{align*}
+
+\kactlimport{JosephusProblem.h}
+
+
